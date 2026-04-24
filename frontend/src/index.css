@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.label {
+  @apply mb-1 block text-sm font-medium text-gray-300;
+}
+
+.input {
+  @apply w-full rounded-md bg-black/40 border border-white/10
+  px-4 py-3 text-white placeholder-gray-400
+  focus:outline-none focus:border-orange-500;
+}
+
+.card {
+  @apply rounded-xl bg-white/5 border border-white/10
+  p-5 backdrop-blur-sm;
+}
+
+.card-title {
+  @apply mb-4 text-lg font-semibold text-white;
+}
+
+.error {
+  min-height: 16px;
+  margin-top: 3px;
+  font-size: 12px;
+  color: #f87171; /* red-400 */
+}
+
+@keyframes modal-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modal-slide-up {
+  animation: modal-slide-up 0.25s ease-out;
+}
